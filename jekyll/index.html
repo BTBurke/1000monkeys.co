@@ -1,0 +1,20 @@
+---
+layout: default
+title: 1000 Monkeys
+showposts: false
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts unstyled">
+    {% for post in site.posts %}
+      <li>
+      <a href="{{ post.url}}"><h4>{{ post.title }}</h4></a>
+      <span class="date">{{post.date | date_to_string}}</span>
+      <p>{{ post.summary }}</p>
+      <a href="{{ post.url }}">Read More &raquo;</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+  

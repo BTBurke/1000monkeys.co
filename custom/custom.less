@@ -1,0 +1,268 @@
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;
+@textColor:             @grayDark;
+
+
+// Links
+// -------------------------
+@linkColor:             #08c;
+@linkColorHover:        darken(@linkColor, 15%);
+
+
+.master {
+    // background: url(/assets/img/wild_oliva.png);
+    background: url(/assets/img/top.png);
+}
+
+.container-back {
+    background: @bodyBackground;
+    min-height: 100%;
+    border-radius: 15px;
+}
+
+.topbar, .footer {
+    background: url(/assets/img/top.png);
+    height: 80px;
+    h1 {
+        font-family: 'Knewave', cursive;
+        font-size: 30px;
+        color: @grayDarker;
+        text-height: 20px;
+        margin-bottom: 0;
+
+        &:hover {
+            color: @red;
+        }
+    }
+    p {
+        font-size: 11px;
+        color: @grayDarker;
+        text-height: 0px;
+        margin-top: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    a {
+        color: @grayDarker;    
+    
+        &:hover {
+            text-decoration: none; 
+        }
+    }
+
+}
+
+
+.sidebar {
+    p {
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+.logo { 
+    margin-top: 40px;
+    border: 10px solid #00f;
+    border-radius: 160px;
+    height:160px;
+    width:160px;
+
+    &:hover  {
+    border: 10px solid #0f0;
+    }
+}
+
+.innerlogoimg {
+    border-radius: 75px;
+    background: url(../img/monkey.png) center no-repeat;
+    width: 150px;
+    height: 150px;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-indent: -9999px;
+    display: block;
+}
+.postlist {
+    p {
+        font-size: 11px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    a {
+        font-size: 13px;
+        text-decoration: none;
+        color: @linkColor;
+        word-wrap: break-word;
+        white-space: normal;
+        font-family: 'Open Sans', sans-serif;
+
+        &:hover {
+            color: @linkColorHover;
+        }
+    }
+    ul {
+        list-style-type: none;
+        list-style-position: inside;
+        padding-left: 0px;
+        text-indent: -2em;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        line-height: 10px;
+        word-wrap: break-word;
+        white-space: normal;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    li {
+        list-style-type: none;
+        list-style-position: inside;
+        padding-left: 0px;
+        text-indent: 0px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        line-height: 12px;
+        word-wrap: break-word;
+        white-space: normal;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+.main {
+    margin-top: 40px;
+}
+
+.posts {
+    ul {
+        list-style-type: none;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h4 {
+        font-size: 20px;
+        color: @red;
+        margin-bottom: 1px;
+        line-height: 18px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 0px;
+        line-height: 15px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    a {
+        color: @linkColor;
+        font-size: 12px;
+        &:hover {
+            color: @linkColorHover;
+        }
+        font-family: 'Open Sans', sans-serif;
+    }
+    .date {
+        font-size: 10px;
+        color: @gray;
+        margin-top: 0px;
+        margin-bottom: 3px;
+        line-height: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+.post {
+    h1 {
+        font-size: 30px;
+        color: @red;
+        margin-bottom: 0px;
+    }
+    h2 {
+        font-size: 24px;
+        color: @grayDarker;
+    }
+    h3 {
+        font-size: 22px;
+        color: @grayDarker;
+    }
+    h4 {
+        font-size: 20px;
+        color: @grayDarker;
+    }
+    p {
+        font-size: 14px;
+        color: @grayDark;
+        font-family: 'Open Sans', sans-serif;
+    }
+    a {
+        color: @linkColor;
+        &:hover {
+            @linkColorHover;
+        }
+        font-family: 'Open Sans', sans-serif; 
+    }
+
+    ul,li {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .date {
+        font-size: 10px;
+        color: @gray;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        line-height: 10px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .tag-list {
+        font-size: 10px;
+        color: @gray;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        line-height: 10px;
+        font-family: 'Open Sans', sans-serif;
+
+        ul {
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            display: inline;
+        }
+        li {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            &:after {
+                content: ", ";
+            }
+            &.last:after {
+                content: "";
+            }
+        }
+
+    }
+}
+
+.post-content {
+    margin-top: 10px;
+}

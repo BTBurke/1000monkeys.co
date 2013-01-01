@@ -1,0 +1,38 @@
+---
+layout: default
+comments: true
+showposts: true
+---
+<div class="post">
+    <h1>{{page.title}}</h1>
+    <span class="date">{{page.date | date_to_string}} - {{page.location}}</span> | 
+    <span class="tag-list">
+        Posted in: 
+        <ul>
+        {% for tag in page.tags %}
+            {% if forloop.last %}
+                <li class="last"><a href="/tag/{{tag}}.html">{{tag}}</a></li>
+            {% else %}
+                <li><a href="/tag/{{tag}}.html">{{tag}}</a></li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </span>
+    <div class="post-content">
+    {{ content }}
+    </div>
+</div>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50e22e18126186d9"></script>
+<!-- AddThis Button END -->
+
+

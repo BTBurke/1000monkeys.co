@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ page.title }}</title>
+   <meta name="author" content="Bryan Burke" />
+
+   <link href="{{site.url}}/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+   <link href="{{site.url}}/assets/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+   <link href="{{site.url}}/assets/css/custom.css" rel="stylesheet">
+   <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+   <link href='http://fonts.googleapis.com/css?family=Knewave' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="{{site.url}}/assets/js/bootstrap.min.js"></script>
+  <div id="topbar" class="topbar">
+    <div class="container">
+      <a href="/"><h1>1000 Monkeys</h1>
+      <p>I'll get something right eventually</p></a>
+    </div>
+  </div>
+  <div class="master">
+  <div id="maincontainer" class="container container-back">
+  <div class="row">
+    <div class="span3 offset1">
+      <div class="sidebar">
+      {% include sidebar.html %}
+    </div>
+    </div>
+    <div class="span7">
+      <div class="main">
+      {{ content }}
+      </div>
+      {% if page.comments %}
+      <script>
+var idcomments_acct = '21fe031f50ec6fec29a35054f30c15e0';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+        {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37352345-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+ /*
+        Method calculates container height and stretches to bottom of page
+        if content does not fill entire space.
+    */
+    function setHeight() {
+        // Get css values needed to compute height.
+
+        var winHeight = $(window).height(); // get user's browser height...
+        var conHeight = $('#maincontainer').height(); // get container height...
+        var topHeight = $('#topbar').height();
+
+        // If the size of the container is less than the size of the user's window... resize.
+        if(conHeight < winHeight) {
+            var newHeight = winHeight - 2*topHeight - 1; // calculate the new height....
+            $('#maincontainer').height(newHeight); // apply the height value to the container.
+        }
+    }
+
+    // Run as soon as page loads...
+    $(document).ready(function(){
+        setHeight();
+    });
+</script>
+<div class="footer">
+  </div>
+</body>
+</html>
